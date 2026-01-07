@@ -1,27 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int secondLargest(int arr[],int n){
-    int large = INT_MIN;
-    int second = INT_MIN;
-    for(int i = 0 ; i< n;i++){
-        if(arr[i]>large){
-            second = large;
-            large = arr[i];
-        }
-
-        else if(arr[i]>second && arr[i] != large) second = arr[i];
-    }
-    return second;
-}
 int main(){
     int n;
     cin >> n;
     int arr[n];
+    int max1 = INT_MIN;
+    int max2 = INT_MIN;
     for(int i = 0;i<n;i++){
         cin >> arr[i];
+        if(arr[i] > max1){
+            max1 = arr[i];
+        }
     }
-    int ans = secondLargest(arr,n);
-    cout << ans << endl;
-    return 0;
+    for(int i = 0;i<n;i++){
+        if(arr[i] > max2 && arr[i] != max1){
+            max2 = arr[i];
+        }
+    }
+    cout << max2 << endl;
+    
+
 }
