@@ -2,11 +2,12 @@
 using namespace std;
 
 bool sorted(int arr[],int n){
-    int f = 0;
     for(int i = 0;i<n-1;i++){
-        if(arr[i] > arr[i+1]) f++;
+        if(arr[i] > arr[i+1]){
+            return false;
+        }
     }
-    return f > 0 ? false : true;
+    return true;
 }
 
 int main(){
