@@ -19,10 +19,10 @@ int main(){
             break;
         }
         else if(nums[mid]>k){
-            mid = high - 1;
+            high = mid - 1;
         }
         else if(nums[mid] < k) {
-            mid = low + 1;
+            low = mid + 1;
         }
     }
     cout << "Element at:" << index << endl;
