@@ -18,7 +18,7 @@ int main(){
         arr[mini] = temp;
     }
     for(int x : arr){
-        cout << x << " ";
+        cout << x << "    ";
     }
     cout << endl;
     return 0;
